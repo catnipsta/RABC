@@ -1,0 +1,40 @@
+.TH RABC 1
+.SH NAME
+RABC - Random Ass Beat Creator, for creating randomly generated beats in an instant.
+
+.SH SYNOPSIS
+rabc [option] [argument]
+
+.SH DESCRIPTION
+RABC is a tool written in C for Linux (but should work on other UNIX systems) which utilizes SoX to generating beats randomly.
+RABC does not use any AI to generate its beats, just randomness at its peak. Although it is extremely random, you do have the
+choice of selecting its random seed, tempo (notes/beats per second), how many times it plays the beat, the beat's length, the
+range of musical notes, and of course the destination/output file.
+
+.SH OPTIONS
+	-o "output file.ogg"    (Or .wav or whatever else is supported on your system)  (Default: out.ogg)
+
+	-l 8                    (Set the beat's length to 8 seconds long)               (Default: 4 - 8 seconds)
+
+	-s 31415926             (Set the random seed to 31415926)                       (Default: random)
+
+	-t 4                    (Set the tempo to 4 beats/notes a second)               (Default: 4)
+
+	-r 2                    (Plays the beat 2 times)                                (Default: 1)
+
+	-x 1                    (Sets lowest musical note to piano key 1)               (Default: 1)
+
+	-y 88                   (Sets highest musical note to piano key 88)             (Default: 64)
+
+.SH EXAMPLES
+	ramc -s 1234 -t 6 -o beat1.wav          (Generate a beat based on the random seed 1234 with a tempo of 6 notes a second and output to beat1.wav)
+
+	ramc -b 2 -l 8                          (Play the main beat 2 times and set the beat length to 8)
+
+	ramc -x 3 -y 56                         (Generates a song with musical notes ranging from piano key 3 to 56)
+
+.SH SEE ALSO
+SoX(1)
+
+.SH AUTHOR
+RABC was created by Nikolai Klover who goes by the alias of Cat Peep online.
