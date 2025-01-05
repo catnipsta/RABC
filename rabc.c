@@ -85,11 +85,7 @@ int main(int argc, char *argv[]){
 	playbeat(r);
 
 	com[strlen(com)-1] = '\0';
-	FILE *rabctmp = fopen("rabctmp","w");
-	fputs(com,rabctmp);
-	fclose(rabctmp);
-	system("sh rabctmp");
-	system("rm rabctmp");
+	system(com);
 
 	free(com);
 	free(output);
