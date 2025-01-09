@@ -38,7 +38,7 @@ int main(int argc, char *argv[]){
 	while((c = getopt(argc, argv, "o:l:s:t:r:x:y:")) != -1){
 	switch(c){
 	case 'o':
-		output = optarg;
+		strcpy(output,optarg);
 		break;
 	case 'l':
 		l = atoi(optarg);
